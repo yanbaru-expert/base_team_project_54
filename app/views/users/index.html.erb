@@ -1,0 +1,5 @@
+<%= link_to "ユーザ登録画面へ", "/users/new" %>
+<h1>ユーザー 一覧</h1>
+<% @users.each do |user| %>
+  <p><%= user.name %></p>
+<% end %>
