@@ -1,6 +1,9 @@
 <%= link_to "ユーザ登録画面へ", "/users/new" %>
 <h1>ユーザー 一覧</h1>
 <% @users.each do |user| %>
-  <p><%= user.name %></p>
-  <%= link_to "詳細", "/users/#{user.id}", method: :get %>
+  <p>
+    <%= user.name %>
+    <%= link_to "詳細", "/users/#{user.id}", method: :get %>
+    <%= link_to "編集", "/users/#{user.id}/edit", method: :get %>
+  </p>
 <% end %>
